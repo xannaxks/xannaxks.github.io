@@ -1,0 +1,91 @@
+body, #div-wrapper, #div-img, #div-learning, #div-date, #div-heading, #div-text, #div-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+}
+
+body {
+  font-size: 16px;
+  height: 100vh;
+  font-family: Figtree;
+  background-color: hsl(47, 88%, 63%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#div-wrapper {
+  background-color: hsl(0, 0%, 100%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+  height: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 1px solid black;
+  -webkit-box-shadow: 5px 5px 0px black;
+          box-shadow: 5px 5px 0px black;
+}
+
+#div-img, #div-learning, #div-date, #div-date, #div-heading, #div-text, #div-author {
+  width: 90%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#svg {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#learning {
+  background-color: hsl(47, 88%, 63%);
+  border-radius: 10px;
+  padding: 2.5%;
+  font-weight: 500;
+  color: hsl(0, 0%, 7%);
+}
+
+#div-heading {
+  font-weight: 800;
+}
+
+#div-text {
+  color: hsl(0, 0%, 50%);
+}
+
+#author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#author-avatar {
+  width: 25%;
+}
+
+#author-name {
+  font-weight: 800;
+}

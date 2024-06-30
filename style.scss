@@ -1,0 +1,79 @@
+$Yellow: hsl(47, 88%, 63%);
+$White: hsl(0, 0%, 100%);
+$Grey: hsl(0, 0%, 50%);
+$Black: hsl(0, 0%, 7%);
+$Weights: 500, 800;
+$FontSz: 16px;
+
+@mixin radius {
+    border-radius: 20px;
+}
+
+body, #div-wrapper, #div-img, #div-learning, #div-date, #div-heading, #div-text, #div-author {
+    display: flex;
+    @include radius;
+}
+
+body {
+    font-size: 16px;
+    height: 100vh;
+    font-family: Figtree;
+    background-color: $Yellow;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#div-wrapper {
+    background-color: $White;
+    flex-direction: column;
+    width: 25%;
+    height: 80%;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    box-shadow: 5px 5px 0px black;
+}
+
+#div-img, #div-learning, #div-date, #div-date, #div-heading, #div-text, #div-author {
+    width: 90%;
+    justify-content: flex-start;
+}
+
+#svg {
+    width: 100%;
+    @include radius;
+}
+
+#learning {
+    background-color: $Yellow;
+    border-radius: 10px;
+    padding: 2.5%;
+    font-weight: nth($Weights, 1);
+    color: $Black;
+}
+
+#div-heading {
+    font-weight: nth($Weights, 2);
+}
+
+#div-text {
+    color: $Grey;
+}
+
+#author {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#author-avatar {
+    width: 25%;
+}
+
+#author-name {
+    font-weight: nth($Weights, 2);
+}

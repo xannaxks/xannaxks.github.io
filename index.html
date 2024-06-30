@@ -3,80 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | QR code component</title>
-  
-  <style>
-     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
-    /* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); } */
-    body {
-      display: flex;
-      font-family: Outfit;
-      font-size: 15px;
-      justify-content: center;
-      height: 100vh;
-      align-items: center;
-      /* background-color: black; */
-      background-color: hsl(212, 45%, 89%);
-    }
-    #main, #qr-txt-1-div, #qr-txt-2-div {
-      display: inline-flex;
-    }
-    #main {
-      border-radius: 10px;
-      width: 20%;
-      height: 65%;
-      flex-direction: column;
-      background-color: white;
-      justify-content: space-around;
-      align-items: center;
-    }
-    #qr-txt-1-div {
-      color: hsl(218, 44%, 22%);
-      font-weight: 700;
-    }
-    #qr-txt-2-div {
-      font-weight: 400;
-      color: hsl(220, 15%, 55%);
-    }
-    #qr-txt-1-div, #qr-txt-2-div, #qr-img-div {
-      width: 90%;
-      text-align: center;
-    }
-    #qr-img-img {
-      width: 100%;
-      border-radius:10px;
-    }
-  </style>
-
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Blog preview card</title>
 </head>
 <body>
 
-  <div id="main">
-    <div id="qr-img-div">
-      <img src="./images/image-qr-code.png" id="qr-img-img">
+  <div id="div-wrapper">
+    <div id="div-img">
+      <img id="svg" src="./assets/images/illustration-article.svg" alt="svg image">
     </div>
-    <div id="qr-txt-1-div">
-      Improve your front-end skills by building projects
+    <div id="div-learning">
+      <div id="learning">Learning</div>
     </div>
-    <div id="qr-txt-2-div">
-      Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+    <div id="div-date">
+      <div id="date">Published 21 Dec 2023</div>
+    </div>
+    <div id="div-heading">
+      <div id="heading">HTML & CSS foundations</div>
+    </div>
+    <div id="div-text">
+      <div id="text">
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </div>
+    </div>
+    <div id="div-author">
+      <div id="author">
+        <img id="author-avatar" src="./assets/images/image-avatar.webp">
+        <div id="author-name">Greg Hooper</div>
+      </div>
     </div>
   </div>
+  <!-- Learning
 
-  <!-- Improve your front-end skills by building projects
+  Published 21 Dec 2023
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  -->
+  HTML & CSS foundations
+
+  These languages are the backbone of every website, defining structure, content, and presentation.
+
+  Greg Hooper
+   -->
 </body>
 </html>
