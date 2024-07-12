@@ -1,91 +1,126 @@
-body, #div-wrapper, #div-img, #div-learning, #div-date, #div-heading, #div-text, #div-author {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-size: 16px;
-  height: 100vh;
-  font-family: Figtree;
-  background-color: hsl(47, 88%, 63%);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0;
-  padding: 0;
+  font-size: 14px;
+  background-color: hsl(0, 0%, 8%);
+  color: white;
 }
 
-#div-wrapper {
-  background-color: hsl(0, 0%, 100%);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 25%;
-  height: 80%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  border: 1px solid black;
-  -webkit-box-shadow: 5px 5px 0px black;
-          box-shadow: 5px 5px 0px black;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
 
-#div-img, #div-learning, #div-date, #div-date, #div-heading, #div-text, #div-author {
-  width: 90%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+figure {
+  width: 100px;
 }
 
-#svg {
-  width: 100%;
-  border-radius: 20px;
-}
-
-#learning {
-  background-color: hsl(47, 88%, 63%);
-  border-radius: 10px;
-  padding: 2.5%;
-  font-weight: 500;
-  color: hsl(0, 0%, 7%);
-}
-
-#div-heading {
-  font-weight: 800;
-}
-
-#div-text {
-  color: hsl(0, 0%, 50%);
-}
-
-#author {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: hsl(0, 0%, 12%);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
 }
 
-#author-avatar {
-  width: 25%;
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.75rem;
+  width: 90%;
 }
 
-#author-name {
-  font-weight: 800;
+button {
+  display: block;
+  border: none;
+  background-color: white;
+  background-color: hsl(0, 0%, 20%);
+  color: inherit;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.location {
+  font-weight: 600;
+  color: hsl(75, 94%, 57%);
+}
+
+button {
+  font-weight: 400;
+  border-radius: 10px;
+  padding-block: 0.75rem;
+  width: 100%;
+}
+
+button:hover {
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(75, 94%, 57%);
 }
