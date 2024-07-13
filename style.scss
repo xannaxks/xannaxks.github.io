@@ -1,81 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-$Green: hsl(75, 94%, 57%);
+$Nutmeg: hsl(14, 45%, 36%);
+$Dark_Raspberry: hsl(332, 51%, 32%);
 $White: hsl(0, 0%, 100%);
-$Grey: hsl(0, 0%, 20%);
-$Dark_Grey: hsl(0, 0%, 12%);
-$Off_Black: hsl(0, 0%, 8%);
-$Weights: 400, 600, 700;
+$Rose_White: hsl(330, 100%, 98%);
+$Eggshell: hsl(30, 54%, 90%);
+$Light_Grey: hsl(30, 18%, 87%);
+$Wenge_Brown: hsl(30, 10%, 34%);
+$Dark_Charcoal: hsl(24, 5%, 18%);
+$Weight: 400, 600, 700;
+$Fonts: "Young Serif", "Outfit";
+$margin_block: 0;
 
 @mixin flex-column {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
 }
 
+/* Basics */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
-}
-body {
-    font-family: "Inter", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    min-height: 100vh;
-    @include flex-column;
-    font-size: 14px;
-    background-color: $Off_Black;
-    color: white;
+    font-size: 16px;
+    $margin_block: min(1rem, calc((100vw - 375px) / 2)) !global;
 }
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 50%;
+}
+.wrap {
+    white-space: wrap;
+}
+/* Here we go */
+body {
+    min-height: 100vh;
+    background-color: $Rose_White; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main, figure {
+    width: max(375px, 50%);
 }
 figure {
-    width: 100px;
+    background-color: $White;
+    display: flex;
+    padding-top: min(2rem, calc((50vw - 375px) / 2));
+    justify-content: center;
+}
+img {
+    width: max(calc(50vw - 4rem), 375px);
+    height: auto;
 }
 main {
-    @include flex-column;
-    gap: 1.5rem;
-    align-items: center;
-    background-color: $Dark_Grey;
-    border-radius: 15px;
-    padding: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: $White;
+    gap: 2rem;
 }
-.info {
-    @include flex-column;
-    gap: 0.5rem;
+.description, .preparation-time, .ingredients, .instructions, .nutrition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
 }
-.social-media {
-    @include flex-column;
+h1, h2, h4 {
+    font-family: nth($Fonts, 1);
+}
+h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+li {
+    list-style-position: outside;
+    margin-left: 1.5rem;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     gap: 0.75rem;
-    width: 90%;
 }
-button {
-    display: block;
-    border: none;
-    background-color: white;
-    background-color: $Grey;
-    color: inherit;
+p, li, .nutrition-name {
+    font-family: nth($Fonts, 2);
+    font-weight: nth($Weight, 1);
+    color: $Wenge_Brown;
 }
-.name {
-    font-weight: nth($Weights, 3);
-    font-size: 1.5rem;
+.bolder {
+    font-weight: nth($Weight, 3);
 }
-.location {
-    font-weight: nth($Weights, 2);
-    color: $Green;
+.instructions, .nutrition {
+    border-top: 1px solid $Light_Grey;
+    padding-top: 2rem;
 }
-button {
-    font-weight: nth($Weights, 1);
+.preparation-time {
+    padding: 1rem;
+    background-color: $Rose_White;
+    width: max(calc(375px - 4rem), calc(50vw - 4rem));
     border-radius: 10px;
-    padding-block: 0.75rem;
-    width: 100%;
 }
-button:hover {
-    color: $Off_Black;
-    background-color: $Green;
+h4 {
+    color: $Dark_Raspberry;
+}
+.preparation-time li::marker {
+    color: $Dark_Raspberry;
+}
+h2 {
+    color: $Nutmeg;
+}
+.ingredients, .instructions, .nutrition {
+    li::marker {
+        color: $Nutmeg;
+        font-weight: nth($Weight, 2);
+    }
+}
+li {
+    padding-left: 0.75rem;
+}
+.nutrition-amount {
+    font-weight: nth($Weight, 2);
+    color: $Nutmeg;
+    font-family: nth($Fonts, 2);
+}
+tr {
+    display: flex;
+    border-top: 1px solid $Light_Grey;
+    justify-content: space-between;
+    padding-block: 0.75rem;
+    width: max(calc(375px - 4rem), calc(50vw - 4rem));
+}
+tr:first-of-type {
+    border: none;
+}
+img {
+    border-radius: 10px;
+}
+main {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+figure {
+    margin-top: $margin_block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+main {
+    margin-bottom: $margin_block;
+}
+@media screen and (width: 375px) {
+    img {
+        border-radius: 0px;
+    }
 }
